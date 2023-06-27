@@ -6,11 +6,17 @@ public class Projectile : MonoBehaviour
 {
     public float moveSpeed;
     private PointManager scoreManager;
-
+    private TenKillsTrophies tenK;
+    private HundredKillsTrophies hundredk;
     // Start is called before the first frame update
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<PointManager>();
+        GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");
+        tenK = cam.GetComponent<TenKillsTrophies>();
+
+        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+        hundredk = camera.GetComponent<HundredKillsTrophies>();
     }
 
     // Update is called once per frame
@@ -25,6 +31,8 @@ public class Projectile : MonoBehaviour
         {
             Destroy(collision.gameObject);
             scoreManager.UpdateScore(50);
+            tenK.EnemyK();
+            hundredk.EnemeyH();
             Destroy(gameObject);
         }
 

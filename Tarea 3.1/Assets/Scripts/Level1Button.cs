@@ -9,5 +9,6 @@ public class Level1Button : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
         PlayerPrefs.SetInt("death", 0);
+        PlayerPrefs.SetInt("Deads", 0);
     }
 }

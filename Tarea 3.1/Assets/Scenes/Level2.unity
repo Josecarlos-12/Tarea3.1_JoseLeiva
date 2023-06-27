@@ -1049,6 +1049,8 @@ GameObject:
   - component: {fileID: 779131248}
   - component: {fileID: 779131247}
   - component: {fileID: 779131250}
+  - component: {fileID: 779131251}
+  - component: {fileID: 779131252}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1143,6 +1145,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels: 1
+--- !u!114 &779131251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779131246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943b3271f30539348b74c0b194efdde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyH: 0
+--- !u!114 &779131252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779131246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7a70e90d4014e43bdba07fa040f833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyKills: 0
 --- !u!1 &907784664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1394,7 @@ MonoBehaviour:
   - {fileID: 628145914}
   losePanel: {fileID: 567671705}
   dieCounter: 0
+  dieTrophie: {fileID: 0}
 --- !u!114 &1160480221
 MonoBehaviour:
   m_ObjectHideFlags: 0
