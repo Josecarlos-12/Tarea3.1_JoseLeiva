@@ -1,3 +1,4 @@
+using GameJolt.API;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class PlayerLifes : MonoBehaviour
 {
     public int lifes = 3;
     public Image[] lifesUI;
+    public GameObject losePanel;
+    public int dieCounter;
+    public DieTrophie dieTrophie;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +43,8 @@ public class PlayerLifes : MonoBehaviour
             }
             if (lifes <= 0)
             {
+                losePanel.SetActive(true);
+                dieTrophie.Deads();
                 Destroy(gameObject);
             }
         }
@@ -62,8 +68,10 @@ public class PlayerLifes : MonoBehaviour
             }
             if (lifes <= 0)
             {
+                losePanel.SetActive(true);
+                dieTrophie.Deads();
                 Destroy(gameObject);
-                SceneManager.LoadScene("Lose");
+                
             }
         }
     }
