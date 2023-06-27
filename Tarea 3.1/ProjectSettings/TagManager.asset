@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Boundary
   - BoundaryDead
+  - EnemyBomb
   layers:
   - Default
   - TransparentFX

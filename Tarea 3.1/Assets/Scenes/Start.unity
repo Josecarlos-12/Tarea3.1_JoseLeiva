@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SPACE INVADERS
+  m_text: SPACE INTRUDERS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0eb8c8f5a1dcff045a216b6d37fc9834, type: 2}
   m_sharedMaterial: {fileID: 5156269776742568427, guid: 0eb8c8f5a1dcff045a216b6d37fc9834, type: 2}
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 70.85
   m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 1

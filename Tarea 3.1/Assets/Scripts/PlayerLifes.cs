@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerLifes : MonoBehaviour
@@ -39,6 +40,30 @@ public class PlayerLifes : MonoBehaviour
             if (lifes <= 0)
             {
                 Destroy(gameObject);
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyBomb")
+        {
+            Destroy(collision.gameObject);
+            lifes -= 1;
+            for (int i = 0; i < lifesUI.Length; i++)
+            {
+                if (i < lifes)
+                {
+                    lifesUI[i].enabled = true;
+                }
+                else
+                {
+                    lifesUI[i].enabled = false;
+                }
+            }
+            if (lifes <= 0)
+            {
+                Destroy(gameObject);
+                SceneManager.LoadScene("Lose");
             }
         }
     }
